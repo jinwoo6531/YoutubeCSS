@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/2d323a629b.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Youtube Mobile</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <i class="fab fa-youtube"></i>
+        <span class="title">Youtube</span>
+      </div>
+      <div class="icons">
+        <i class="fas fa-search"></i>
+        <i class="fas fa-ellipsis-v"></i>
+      </div>
+    </header>
+
+    <!-- Viedeo player -->
+    <section class="player">
+      <video controls src="video/video1.mp4"></video>
+    </section>
+
+    <div class="infoAndUpNext">
+      <!-- Video Info -->
+      <section class="info">
+        <!-- Metadata -->
+        <div class="metadata">
+          <ul class="hashtags">
+            <li>#Dancing</li>
+            <li>#지코</li>
+            <li>#핫핫</li>
+          </ul>
+          <div class="titleAndButton">
+            <span class="title clamp">
+              Clone Test Clone TestClone TestClone TestClone TestClone Test
+              Clone TestClone TestClone TestClone TestClone Test Clone TestClone
+              TestClone TestClone TestClone Test
+            </span>
+            <button class="moreBtn">
+              <i class="fas fa-caret-down"></i>
+            </button>
+          </div>
+          <span class="views">1M views 1 month ago</span>
+        </div>
+        <!-- actions -->
+        <ul class="actions">
+          <li>
+            <button><i class="fas fa-thumbs-up"></i><span>1K</span></button>
+          </li>
+          <li>
+            <button><i class="fas fa-thumbs-down"></i><span>0</span></button>
+          </li>
+          <li>
+            <button><i class="fas fa-share"></i><span>Share</span></button>
+          </li>
+          <li>
+            <button><i class="fas fa-plus"></i><span>Save</span></button>
+          </li>
+          <li>
+            <button><i class="fab fa-apple"></i><span>Report</span></button>
+          </li>
+        </ul>
+        <!-- Channel Description -->
+        <div class="channel">
+          <div class="metadata">
+            <img src="image/a.png" alt="" />
+            <div class="info">
+              <span class="name">진우</span>
+              <span class="subscribers">1K subscribers</span>
+            </div>
+          </div>
+          <button class="subscribe">subscribe</button>
+        </div>
+      </section>
+
+      <!-- Up Next -->
+      <section class="upNext">
+        <span class="title">Up next</span>
+        <ul>
+          <li class="item">
+            <div class="img"><img src="image/d.png" alt="" /></div>
+            <div class="info">
+              <span class="title">즉석콤보구이 강의.1</span>
+              <span class="name">진우</span>
+              <span class="views">82K views</span>
+            </div>
+            <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+          </li>
+          <li class="item">
+            <div class="img"><img src="image/d.png" alt="" /></div>
+            <div class="info">
+              <span class="title">즉석콤보구이 강의.2</span>
+              <span class="name">진우</span>
+              <span class="views">92K views</span>
+            </div>
+            <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+          </li>
+          <li class="item">
+            <div class="img"><img src="image/d.png" alt="" /></div>
+            <div class="info">
+              <span class="title">즉석콤보구이 강의.3</span>
+              <span class="name">진우</span>
+              <span class="views">77K views</span>
+            </div>
+            <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <script>
+      const actions = document.querySelector(".actions");
+      const button = actions.querySelector("button");
+      const i = button.querySelector("i");
+      const moreBtn = document.querySelector(".info .metadata .moreBtn");
+      const title = document.querySelector(".info .metadata .title");
+
+      moreBtn.addEventListener("click", () => {
+        moreBtn.classList.toggle("clicked");
+        title.classList.toggle("clamp");
+      });
+
+      function handlerColor() {
+        i.classList.toggle("active");
+      }
+      button.addEventListener("click", handlerColor);
+    </script>
+  </body>
+</html>
